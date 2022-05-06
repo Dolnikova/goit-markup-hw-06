@@ -408,7 +408,8 @@ li {
   justify-content: center;
   align-items: center;
   fill: var(--client-command-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-blok-item + .client-blok-item {
   margin-left: 30px;
@@ -522,6 +523,7 @@ li {
 .join-blok-link:focus {
   background-color: var(--second-color);
 }
+
 .subscribe {
   margin-top: 8px;
   margin-left: 93px;
@@ -536,13 +538,15 @@ li {
   margin-bottom: 20px;
 }
 .subscribe-block {
-  display: inline-flex;
+  /* position: relative; */
+  display: flex;
 }
 .subscribe-button {
+  position: relative;
   cursor: pointer;
   width: 200px;
   height: 50px;
-
+  
   background-color: var(--second-color);
   border: none;
   border-radius: 4px;
@@ -550,12 +554,17 @@ li {
   align-items: center;
   display: flex;
   justify-content: center;
+  
+}
+.subscribe-icon {
+  position: relative;
+  margin-left: 10px;
 }
 .subscribe-class {
   font-family: "Roboto", Tahoma, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1, 875;
+  line-height: 1.875;
   letter-spacing: 0.06em;
   color: var(--logo-footer-adress-hero);
   margin-right: 10px;
@@ -730,7 +739,7 @@ li {
   right: 8px;
   cursor: pointer;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   /* background-color: orange; */
 }
 .button-modal:hover {
@@ -792,7 +801,8 @@ li {
   border-radius: 4px;
   outline: none;
   padding-left: 42px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* .modal-input:hover, */
 .modal-input:focus {
@@ -836,11 +846,15 @@ li {
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: 0.01em;
+  width: 448px;
+  height: 120px;
   color: rgba(117, 117, 117, 0.5);
   border-color: rgba(33, 33, 33, 0.2);
   padding: 12px 16px;
   outline: none;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  resize: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-text:focus {
   border-radius: 4px;
@@ -850,6 +864,59 @@ li {
   color: rgba(33, 33, 33, 1);
   border-color: #2196f3;
 } */
+.check-text {
+  /* position: relative; */
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.72;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.check-text span .modal-icon-check {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--brand-color);
+  border-radius: 2px;
+  margin-right: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* перший варіант при свг не у спрайті для модального вікна чеку*/
+/* .check-text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 3px solid var(--brand-color);
+  border-radius: 2px;
+  margin-right: 9px;
+
+} */
+
+/* .modal-check:checked + .check-text::before {
+  background-color: var(--second-color);
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+/* кінець першого варіанту свг не у спрайті */
+.modal-icon-check {
+  fill: transparent;
+}
+.modal-check:checked + .check-text span .modal-icon-check {
+  background-color: var(--second-color);
+  border: none;
+}
+.modal-check:checked + .check-text .modal-icon-check {
+  fill: #ffffff;
+}
+.agreement-text {
+  color: var(--second-color);
+  text-decoration: underline;
+  padding-left: 1px;
+}
 .modal-input:focus:placeholder-shown {
   border: 1px solid var(--second-color);
 }
@@ -866,14 +933,15 @@ li {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 163px;
+  margin-left: 25%;
   margin-right: 50%;
   width: 200px;
   height: 50px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   border: transparent;
 }
 .footer-modal-input {
+  position: relative;
   border-color: rgba(255, 255, 255, 0.3);
   outline: none;
   background-color: var(--background-color);
@@ -884,6 +952,5 @@ input.footer-modal-input {
   height: 50px;
 
   border-radius: 4px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
-/* padding: 40px; пересмотреть где поставил */
