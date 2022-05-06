@@ -790,7 +790,7 @@ li {
   line-height: 1.15;
   font-weight: 700;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--brand-color);
   text-align: center;
   margin-bottom: 12px;
 }
@@ -837,7 +837,7 @@ li {
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
-  color: #757575;
+  color: var(--text-color);
 }
 .modal-text {
   width: 448px;
@@ -910,7 +910,7 @@ li {
   border: none;
 }
 .modal-check:checked + .check-text .modal-icon-check {
-  fill: #ffffff;
+  fill: var(--logo-footer-adress-hero);
 }
 .agreement-text {
   color: var(--second-color);
