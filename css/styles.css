@@ -722,21 +722,22 @@ li {
   pointer-events: none;
 }
 .modal {
+  max-width: 528px;
+  min-height: 581px;
   background-color: var(--logo-footer-adress-hero);
-  padding: 40px;
   border: none;
   position: absolute;
-  justify-content: center;
+  display: contents;
   left: 100%;
   transform: translate(-100%, -50%);
   transition: transform 250ms;
 }
 .block-modal {
-  max-width: 528px;
-  min-height: 581px;
+  /* max-width: 528px;
+  min-height: 581px; */
   background-color: var(--logo-footer-adress-hero);
   padding: 40px;
-  border: none;
+  /* border: none; */
   position: absolute;
   top: 50%;
   left: 50%;
